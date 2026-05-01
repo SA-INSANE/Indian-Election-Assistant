@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Election Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Elections App</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="tab-btn active" data-target="timeline-section">Timeline</button>
+                <button class="tab-btn" data-target="flashcards-section">Flashcards</button>
+                <button class="tab-btn" data-target="quiz-section">Quiz</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Indian Election Assistant</h1>
+                <p>Interactive guide to the world's largest democracy.</p>
+            </header>
+
+            <div class="tab-content-container">
+        <!-- Interactive Timeline Section -->
+        <section id="timeline-section" class="tab-section active">
+            <div class="section-header">
+                <h2>Election Timeline</h2>
+                <p class="section-desc">Follow the step-by-step journey of the electoral process.</p>
+            </div>
+            <div class="timeline" id="timeline">
+                <!-- Timeline items injected via JS -->
+            </div>
+        </section>
+
+        <!-- Flashcards Section -->
+        <section id="flashcards-section" class="tab-section">
+            <div class="section-header">
+                <h2>Key Concepts</h2>
+                <p class="section-desc">Click on a card to reveal its meaning.</p>
+            </div>
+            <div class="flashcards-container" id="flashcards">
+                <!-- Flashcards injected via JS -->
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="tab-section">
+            <div class="section-header">
+                <h2>Test Your Knowledge</h2>
+            </div>
+            <div class="quiz-container" id="quiz-container">
+                <div id="quiz-question" class="quiz-question">Loading question...</div>
+                <div id="quiz-options" class="quiz-options">
+                    <!-- Options injected via JS -->
+                </div>
+                <div id="quiz-feedback" class="quiz-feedback"></div>
+                <button id="next-quiz-btn" class="btn hidden">Next Question</button>
+            </div>
+            <div id="quiz-results" class="quiz-results hidden">
+                <h3 id="score-display"></h3>
+                <button id="restart-quiz-btn" class="btn">Restart Quiz</button>
+            </div>
+        </section>
+            </div> <!-- End tab-content-container -->
+        </main>
+    </div> <!-- End app-layout -->
+    <!-- Floating Chat Assistant -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header" id="chat-header">
+            <span>Election Assistant Chat</span>
+            <button id="toggle-chat-btn" class="icon-btn">_</button>
+        </div>
+        <div class="chat-body hidden" id="chat-body">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    Hello! I am your Indian Election Assistant. Ask me anything about the election process!
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off">
+                <button id="send-chat-btn" class="btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
